@@ -10,6 +10,15 @@ module.exports = {
         lightgray: 'background-color: #cfdbd5;',
         accent: 'background-color: #f5cb5c;',
       },
+      backgroundImage:{
+        'cyberpunk':'url("/home/dylan/Escritorio/deadend-simulator/src/assets/img/cyberpunk.jpg")',
+        'western':'url("/home/dylan/Escritorio/deadend-simulator/src/assets/img/western.jpg")',
+        'christmas':'url("/home/dylan/Escritorio/deadend-simulator/src/assets/img/chirstmas.jpg")',
+        'saFuture':'url("img/saFuture.jpg")',
+        'saCowboy':'url("img/saCowboy.jpg")',
+        'saSanta':'url("img/saSanta.jpg")',
+        
+      },
       colors:{
         dark: 'color: #242423;',
         darkgray: 'color: #333533;',
