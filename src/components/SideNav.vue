@@ -38,7 +38,8 @@
           </div>
            <div class=" w-full  h-1/6 mt-8 " v-if="false">
             <div class="flex flex-col gap-3 items-center justify-center h-2/4 text-gray-200 text-2xl ">
-              <span class="font-light text-violet-500">asd,</span> <span class="font-semibold text-yellow-500">user123</span>
+              <button class="px-5 py-5 bg-zinc-500 mx-2 rounded hover:bg-violet-500 hover:text-black transition-all duration-500  border-2 border-transparent hover:border-white">Sign up</button>
+              <button class="px-5 py-5 text-black bg-zinc-400 mx-2 rounded  hover:bg-yellow-500 hover:text-white transition-all duration-500 border-2 border-transparent hover:border-white">Sign in</button>
             </div>
             
           </div>
@@ -89,14 +90,16 @@ export default {
       bg.classList.remove('hidden')
     }
   },watch:{
-    sidenavOpen: function(newValue){
+    sidenavOpen: function(newValue,oldValue){
       console.log("holla");
+      console.log('Prop changed: ', newValue, ' | was: ', oldValue)
+      
       if(newValue!=false){
         this.open();
       }
     }
-  }
-}
+   }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
