@@ -1,10 +1,10 @@
 <template>
-    <div class="fixed w-full h-full bg-opacity-60 bg-black z-50 transition-all duration-500">
-      <div class=" h-full w-full lg:w-1/3  bg-gray-900  shadow-lg shadow-gray-900  transition-all duration-500">
+    <div id="sidenav-bg" class="fixed w-full h-full bg-opacity-60 bg-black z-50 transition-all duration-500">
+      <div id="sidenav" class=" h-full w-full lg:w-1/3  bg-gray-900  shadow-lg shadow-gray-900  transition-all duration-500">
             
           <div class="h-full">
             <div class="flex w-full p-5 h-1/6 items-start justify-start"> 
-            <fa icon="xmark" class="  text-5xl text-white  hover:text-yellow-500 transition-colors duration-700"/> 
+            <fa icon="xmark" class="text-5xl text-white  hover:text-yellow-500 transition-colors duration-700" @click="closeMenu()"/> 
             </div>
           <div class="h-4/6 w-full flex flex-col items-center justify-start p-5">
             
@@ -59,6 +59,42 @@
 export default {
   name: 'SideNav',
   props: {
+    sidenavOpen:Boolean
+  },data(){
+    
+    return {
+    }
+  },
+  methods:{
+    closeMenu(){
+        this.$emit('closeMenu');
+        console.log("Adiosss");
+        const menu = document.getElementById('sidenav');
+        menu.classList.replace('w-full','w-0');
+        menu.classList.replace('lg:w-1/3','lg:w-0');
+        setTimeout(()=>{
+          menu.classList.add('hidden')
+        },250);
+        setTimeout(()=>{
+          const bg = document.getElementById('sidenav-bg');
+          bg.classList.add('hidden')
+        },300);
+    },
+    open(){
+      const menu = document.getElementById('sidenav');
+      //w-full lg:w-1/3 
+      menu.classList.replace('w-0','w-full');
+      menu.classList.replace('lg:w-0','lg:w-1/3');
+      const bg = document.getElementById('sidenav-bg');
+      bg.classList.remove('hidden')
+    }
+  },watch:{
+    sidenavOpen: function(newValue){
+      console.log("holla");
+      if(newValue!=false){
+        this.open();
+      }
+    }
   }
 }
 </script>

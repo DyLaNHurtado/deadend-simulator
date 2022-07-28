@@ -1,12 +1,12 @@
 <template>
 <div class=" bg-zinc-900 h-screen" >
   <header class="py-5 text-3xl flex items-center justify-between px-5 text-zinc-200 absolute w-full transition-all duration-500 bg-gray-900">
-    <fa icon="bars" class=""/>
+    <fa icon="bars" class="" @click="openMenu()" v-bind:sidenavOpen="isSideNavOpen" />
     <span>DeadEnd Simulator</span>
   </header>
   <div class=" w-full h-full bg-pattern">
     
-    <SideNav/>
+    <SideNav @closeMenu="closeMenu()"/>
     <ProfileView/>
   </div>
   <a href="https://github.com/DyLaNHurtado" target="_blank">
@@ -24,6 +24,20 @@ export default {
   components: {
     ProfileView,
     SideNav,
+},data(){
+  return{
+    isSideNavOpen:Boolean
+  }
+},methods:{
+  openMenu(){
+    console.log(this.isSideNavOpen);
+    this.isSideNavOpen=true;
+    console.log("Hola buenas");
+  },
+  closeMenu(){
+    this.isSideNavOpen=false;
+    console.log("Se mamo");
+  }
 }
 }
 </script>
