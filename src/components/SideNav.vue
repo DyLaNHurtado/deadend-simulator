@@ -1,10 +1,10 @@
 <template>
     <div id="sidenav-bg" class="fixed w-full h-full bg-opacity-60 bg-black z-50 transition-opacity duration-500">
-      <div id="sidenav" class=" h-full w-full lg:w-1/3  bg-gray-900  shadow-lg shadow-gray-900  transition-all ease-in-out duration-500 ">
+      <div id="sidenav" class=" h-full w-0 lg:w-0 hidden bg-gray-900  shadow-lg shadow-gray-900  transition-all ease-in-out duration-500 ">
             
           <div class="h-full">
             <div class="flex w-full p-5 h-30 items-start justify-start"> 
-            <fa icon="xmark" class="text-5xl text-white  hover:text-yellow-500 transition-colors duration-700" @click="closeMenu()"/> 
+            <fa icon="xmark" class="text-5xl text-white  hover:text-yellow-500 transition-colors duration-700 cursor-pointer" @click="closeMenu()"/> 
             </div>
           <div class="h-4/6 w-full flex flex-col items-center justify-start p-5">
             
@@ -36,20 +36,6 @@
           </div>
           </div>
           </div>
-           <div class=" w-full  h-1/6 mt-8 " v-if="false">
-            <div class="flex flex-col gap-3 items-center justify-center h-2/4 text-gray-200 text-2xl ">
-              <button class="px-5 py-5 bg-zinc-500 mx-2 rounded hover:bg-violet-500 hover:text-black transition-all duration-500  border-2 border-transparent hover:border-white">Sign up</button>
-              <button class="px-5 py-5 text-black bg-zinc-400 mx-2 rounded  hover:bg-yellow-500 hover:text-white transition-all duration-500 border-2 border-transparent hover:border-white">Sign in</button>
-            </div>
-            
-          </div>
-          <div class="w-full  h-1/6  mt-8" v-if="true">
-            <div class="flex flex-col gap-3 items-center justify-center h-2/4 text-gray-200 text-2xl ">
-              <span class="font-light text-violet-500">Welcome back,</span> <span class="font-semibold text-yellow-500">user123</span>
-            </div>
-            
-          </div>
-          
        </div>
         
       </div>
@@ -64,6 +50,7 @@ export default {
     sidenavOpen:{
       type:Boolean,
       require:true,
+      default:false,
     }
   },data(){
     
@@ -71,7 +58,7 @@ export default {
     }
   },
   mounted(){
-
+    this.closeMenu();
   },
   methods:{
     closeMenu(){
@@ -86,6 +73,7 @@ export default {
 
     },
     open(){
+      console.log("Si");
       const menu = document.getElementById('sidenav');
       const bg = document.getElementById('sidenav-bg');
       bg.classList.remove('hidden');

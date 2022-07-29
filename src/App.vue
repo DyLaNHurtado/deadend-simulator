@@ -1,12 +1,19 @@
 <template>
 <div class=" bg-zinc-900 h-screen" >
   <header class="py-5 text-3xl flex items-center justify-between px-5 text-zinc-200 absolute w-full transition-all duration-500 bg-gray-900">
-    <fa icon="bars" class="" @click="openMenu()"/>
-    <span>DeadEnd Simulator</span>
+    <fa icon="bars" class=" hover:text-yellow-500 cursor-pointer" @click="openMenu()"/>
+    <div v-if="false">
+      <button class="p-4 mx-2 rounded  hover:bg-yellow-500 transition-all duration-500  border-2 border-white">Register</button>
+      <button class="p-4 mx-2 rounded bg-violet-500 hover:bg-yellow-500 hover:text-white transition-all duration-500 border-2 border-transparent hover:border-black">Sign In</button>
+    </div>
+    <div v-if="true" class="flex items-center justify-center text-gray-200 text-2xl px-14 py-2 group border-2 border-transparent transition-all duration-500 hover:border-white hover:bg-zinc-900 rounded-full cursor-pointer">
+        <img src="./assets/logo.png" class="rounded-lg border-4 border-violet-500 group-hover:border-yellow-500 bg-gray-900 object-center h-16 w-16 transition-colors duration-500" alt="">
+        <span class="font-semibold mx-4 text-gray-200 group-hover:text-yellow-500 transition-colors duration-500 select-none">user123</span>
+      </div>
   </header>
   <div class=" w-full h-full bg-pattern">
     
-    <SideNav @closeMenu="closeMenu()"  :sidenavOpen="Boolean(isSideNavOpen)" />
+    <SideNav @closeMenu="closeMenu()"  :sidenavOpen="Boolean(isSideNavOpen)"  />
     <ProfileView/>
   </div>
   <a href="https://github.com/DyLaNHurtado" target="_blank">
@@ -24,7 +31,8 @@ export default {
   components: {
     ProfileView,
     SideNav,
-},data(){
+},
+data(){
   return{
     isSideNavOpen:Boolean
   }
