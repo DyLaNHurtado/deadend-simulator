@@ -4,7 +4,6 @@
     <div class="w-52 h-52 flex flex-col items-center justify-center">
       <img src="../assets/logo.png" class="rounded-lg border-4 border-violet-500 h-80 w-80 bg-gray-900 object-center" alt=""/> 
       <span class="text-yellow-500 font-bold text-5xl text-center w-full mt-8">User123</span>
-
     </div>
     <div class="w-full h-1/2 flex flex-col text-center items-center justify-center">
       <span class="text-violet-500 font-bold text-4xl text-center w-1/2 my-3 border-4 border-violet-500 mb-10 p-4 bg-gray-900 rounded-3xl "> Stats:</span>

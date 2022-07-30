@@ -4,7 +4,7 @@
             
           <div class="h-full">
             <div class="flex w-full p-5 h-30 items-start justify-start"> 
-            <fa icon="xmark" class="text-5xl text-white  hover:text-yellow-500 transition-colors duration-700 cursor-pointer" @click="closeMenu()"/> 
+            <fa icon="xmark" class="text-5xl text-violet-500  hover:text-yellow-500 transition-colors duration-700 cursor-pointer" @click="closeMenu()"/> 
             </div>
           <div class="h-4/6 w-full flex flex-col items-center justify-start p-5">
             
