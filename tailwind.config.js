@@ -18,6 +18,10 @@ module.exports = {
         'saCowboy':'url("img/saCowboy.jpg")',
         'saSanta':'url("img/saSanta.jpg")',
         'pattern':'url("img/pattern.svg")',
+        'wallpaper-cards':'url("img/cards.jpg")',
+        'wallpaper-ficha':'url("img/fichas.jpg")',
+        'wallpaper-ficha2':'url("img/fichas2.jpg")',
+        'wallpaper-cartoon':'url("img/cartoon.jpg")',
         
       },
       colors:{

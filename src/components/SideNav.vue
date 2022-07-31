@@ -1,7 +1,6 @@
 <template>
     <div id="sidenav-bg" class="fixed w-full h-full bg-opacity-60 bg-black z-50 transition-opacity duration-500">
-      <div id="sidenav" class=" h-full w-0 lg:w-0 hidden bg-gray-900  shadow-lg shadow-gray-900  transition-all ease-in-out duration-500 ">
-            
+      <div id="sidenav" class=" h-full w-0 lg:w-0 hidden bg-gray-900  shadow-lg shadow-gray-900  transition-all ease-in-out duration-500  bg-opacity-80">
           <div class="h-full">
             <div class="flex w-full p-5 h-30 items-start justify-start"> 
             <fa icon="xmark" class="text-5xl text-violet-500  hover:text-yellow-500 transition-colors duration-700 cursor-pointer" @click="closeMenu()"/> 
