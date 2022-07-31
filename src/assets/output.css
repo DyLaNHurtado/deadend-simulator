@@ -1035,6 +1035,22 @@ video {
   background-image: url("img/chirstmas.jpg");
 }
 
+.bg-wallpaper-ficha {
+  background-image: url("img/fichas.jpg");
+}
+
+.bg-wallpaper-ficha2 {
+  background-image: url("img/fichas2.jpg");
+}
+
+.bg-saFuture {
+  background-image: url("img/saFuture.jpg");
+}
+
+.bg-saSanta {
+  background-image: url("img/saSanta.jpg");
+}
+
 .from-violet-500 {
   --tw-gradient-from: #8b5cf6;
   --tw-gradient-to: rgb(139 92 246 / 0);

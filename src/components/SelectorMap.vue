@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-row bg-slate-700 bg-opacity-80 w-full h-full pt-40 pb-20">
-    <div class="w-1/2 bg-saCowboy bg-no-repeat bg-cover rounded-t-full border-8 shadow-inner shadow-gray-900 border-yellow-500 my-5 mx-10 ">
+    <div class="w-1/2 bg-saSanta bg-no-repeat bg-cover rounded-t-full border-8 shadow-inner shadow-gray-900 border-yellow-500 my-5 mx-10 ">
     </div>
     <div class="w-full rounded-lg mx-10 my-5">
       <div class="h-full w-full flex flex-col p-5">
