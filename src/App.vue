@@ -1,6 +1,6 @@
 <template>
 <div class=" bg-zinc-900 h-screen" >
-  <header class=" text-3xl flex items-center justify-between px-5 text-zinc-200 absolute w-full transition-all duration-500 bg-white bg-opacity-20">
+  <header class=" text-3xl flex items-center justify-between px-5 text-zinc-200 absolute w-full transition-all duration-500 bg-white bg-opacity-10">
     <fa icon="bars" title="Menu" class="hover:text-yellow-500 text-violet-500 cursor-pointer transition-colors duration-700" @click="openMenu()"/>
     <div v-if="true" class="py-4">
       <button class="p-2 rounded  hover:bg-yellow-500 transition-all duration-500  border-2 border-white">Register</button>
